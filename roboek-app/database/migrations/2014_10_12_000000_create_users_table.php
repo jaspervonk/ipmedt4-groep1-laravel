@@ -21,6 +21,10 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
+            $table->integer('saldo')->default(0);
+            $table->integer('aantal_boeken')->default(0);
+            $table->integer('aantal_voorwerpen')->default(0);
+            $table->integer('aantal_medailles')->default(0);
         });
     }
 
