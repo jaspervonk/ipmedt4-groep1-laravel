@@ -21,6 +21,7 @@ class CreateUitdagingenTable extends Migration
             $table->string('vraag')->nullable();
             $table->string('antwoorden')->nullable();
             $table->string('image')->nullable();
+            $table->integer('beloning')->nullable();
         });
     }
 

@@ -16,11 +16,12 @@ class CreateBoekenTable extends Migration
         Schema::create('boeken', function (Blueprint $table) {
             $table->id();
             $table->string('genre_naam');
+            $table->bigInteger('isbn');
             $table->string('titel');
             $table->string('auteur');
             $table->string('beschrijving');
             $table->string('image');
-            $table->integer('aantal_hoofdstukken');
+            $table->integer('aantal_hoofdstukken')->nullable();
             $table->integer('aantal_bladzijdes');
         });
     }

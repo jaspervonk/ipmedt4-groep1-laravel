@@ -15,8 +15,8 @@ class CreateGekozenUitdagingenTable extends Migration
     {
         Schema::create('gekozen_uitdagingen', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id');
             $table->foreignId('uitdaging_id');
+            $table->foreignId('user_id');
             $table->string('geraden_antwoorden')->nullable();
             $table->boolean('behaald');
         });

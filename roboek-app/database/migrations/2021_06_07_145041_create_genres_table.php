@@ -16,6 +16,7 @@ class CreateGenresTable extends Migration
         Schema::create('genres', function (Blueprint $table) {
             $table->string('naam')->unique();
             $table->string('beschrijving');
+            $table->string('image');
         });
     }
 
