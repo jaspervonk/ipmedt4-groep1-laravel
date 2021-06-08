@@ -16,3 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+//ROUTES VOOR VIRTUELE BIBLIOTHEEK:
+Route::get('/bibliotheek', [\App\Http\Controllers\BibliotheekController::class, 'index']);
+Route::get('/bibliotheek/details/{id}', [\App\Http\Controllers\BibliotheekController::class, 'show']);
+Route::get('/bibliotheek/{genre}', [\App\Http\Controllers\BibliotheekController::class, 'showGenre']);
