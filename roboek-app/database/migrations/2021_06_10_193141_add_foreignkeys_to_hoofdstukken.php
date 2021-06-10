@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddForeignkeysToUitdagingen extends Migration
+class AddForeignkeysToHoofdstukken extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,8 @@ class AddForeignkeysToUitdagingen extends Migration
      */
     public function up()
     {
-        Schema::table('uitdagingen', function (Blueprint $table) {
+        Schema::table('hoofdstukken', function (Blueprint $table) {
             $table->foreign('boek_id')->references('id')->on('boeken');
-            $table->foreign('soort')->references('naam')->on('soorten_uitdagingen');
         });
     }
 
@@ -26,9 +25,8 @@ class AddForeignkeysToUitdagingen extends Migration
      */
     public function down()
     {
-        Schema::table('uitdagingen', function (Blueprint $table) {
-            $table->dropForeign('uitdagingen_boek_id_foreign');
-            $table->dropForeign('uitdagingen_soort_foreign');
+        Schema::table('hoofdstukken', function (Blueprint $table) {
+            $table->dropForeign('hoofdstukken_boek_id_foreign');
         });
     }
 }
