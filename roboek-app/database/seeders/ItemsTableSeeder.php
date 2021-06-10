@@ -19,6 +19,8 @@ class ItemsTableSeeder extends Seeder
             'naam' => "Kastkleur oranje",
             'beschrijving' => "De kleur van je kast wordt oranje.",
             'prijs' => 200,
+            'kleur_primary'=> "#E39E4C",
+            'kleur_secondary'=> "#C76229",
             'image' => "img/default_item_color.png",
         ]);
 
@@ -27,6 +29,8 @@ class ItemsTableSeeder extends Seeder
             'naam' => "Kastkleur blauw",
             'beschrijving' => "De kleur van je kast wordt blauw.",
             'prijs' => 200,
+            'kleur_primary'=> "#1F81DC",
+            'kleur_secondary'=> "#374B92",
             'image' => "img/default_item_color.png",
         ]);
 
@@ -43,6 +47,7 @@ class ItemsTableSeeder extends Seeder
             'naam' => "Robotkleur paars",
             'beschrijving' => "Hiermee wordt de kleur van Roboek paars!",
             'prijs' => 300,
+            'kleur_primary'=> "#B61FDC",
             'image' => "img/default_item_color.png",
         ]);
     }

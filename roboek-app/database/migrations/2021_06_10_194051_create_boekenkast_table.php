@@ -16,8 +16,9 @@ class CreateBoekenkastTable extends Migration
         Schema::create('boekenkast', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id');
-            $table->string('robot_kleur')->default();
-            $table->string('kast_kleur')->default();
+            $table->string('robot_kleur')->default("#90c2c4");
+            $table->string('kast_kleur_primary')->default("#38290f");
+            $table->string('kast_kleur_secondary')->default("#110d05");
             $table->foreignId('medaille_id_slot1')->nullable();
             $table->foreignId('medaille_id_slot2')->nullable();
             $table->foreignId('medaille_id_slot3')->nullable();

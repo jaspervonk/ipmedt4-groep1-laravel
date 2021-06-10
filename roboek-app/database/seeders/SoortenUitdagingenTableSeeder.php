@@ -25,6 +25,10 @@ class SoortenUitdagingenTableSeeder extends Seeder
         DB::table('soorten_uitdagingen')->insert([
             'naam' => "Quiz",
         ]);
+
+        DB::table('soorten_uitdagingen')->insert([
+            'naam' => "Vraag",
+        ]);
         
     }
 }
