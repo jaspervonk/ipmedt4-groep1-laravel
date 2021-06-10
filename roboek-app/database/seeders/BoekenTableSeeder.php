@@ -15,7 +15,7 @@ class BoekenTableSeeder extends Seeder
     public function run()
     {
         DB::table('boeken')->insert([
-            'genre_naam' => "Detective",
+            'genre_naam' => "Avontuur",
             'isbn' => 9789000339280,
             'titel' => "Botje",
             'auteur' => "Janneke Schotveld",
@@ -35,7 +35,7 @@ class BoekenTableSeeder extends Seeder
         ]);
         
         DB::table('boeken')->insert([
-            'genre_naam' => "Dieren",
+            'genre_naam' => "Dieren en natuur",
             'isbn' => 9789044749236,
             'titel' => "Een vriendin voor Elisa",
             'auteur' => "Sarah Bosse",
@@ -45,12 +45,12 @@ class BoekenTableSeeder extends Seeder
         ]);
 
         DB::table('boeken')->insert([
-            'genre_naam' => "Historisch Verhaal",
-            'isbn' => 9789025860653,
+            'genre_naam' => "Avontuur",
+            'isbn' => 9789025860806,
             'titel' => "Gevangen op het kasteel",
             'auteur' => "Martine Letterie",
             'beschrijving' => "Marie logeert met haar vader op een buitenhuis. Op een ochtend is iedereen in rep en roer, er is een dure gouden munt gestolen. De vader van Marie wordt verdacht. Kan Marie zijn onschuld bewijzen?",
-            'image' => "img/default_9789044749236.jpg",
+            'image' => "img/default_9789025860806.jpg",
             'aantal_bladzijdes' => 95,
         ]);
     }

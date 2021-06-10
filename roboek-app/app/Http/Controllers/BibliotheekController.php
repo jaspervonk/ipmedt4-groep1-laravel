@@ -17,4 +17,8 @@ class BibliotheekController extends Controller
     public function showGenre($genre){
         return \App\Models\boeken::where('genre_naam', '=', $genre)->get();
     }
+
+    public function chooseGenre(){
+        return \App\Models\genres::all();
+    }
 }
