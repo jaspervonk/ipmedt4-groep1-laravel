@@ -24,6 +24,7 @@ class CreateUsersTable extends Migration
             $table->integer('saldo')->default(0);
             $table->integer('aantal_boeken')->default(0);
             $table->integer('aantal_items')->default(0);
+            $table->integer('aantal_uitdagingen')->default(0);
             $table->integer('aantal_medailles')->default(0);
         });
     }

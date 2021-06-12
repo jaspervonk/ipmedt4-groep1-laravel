@@ -20,12 +20,15 @@ class DatabaseSeeder extends Seeder
             GenresTableSeeder::class,
             BoekenTableSeeder::class,
             GekozenBoekenTableSeeder::class,
+            HoofdstukkenTableSeeder::class,
+            GelezenHoofdstukkenTableSeeder::class,
             SoortenUitdagingenTableSeeder::class,
             UitdagingenTableSeeder::class,
             GekozenUitdagingenTableSeeder::class,
             SoortenItemsTableSeeder::class,
             ItemsTableSeeder::class,
             BehaaldeItemsTableSeeder::class,
+            BoekenkastTableSeeder::class,
         ]);
     }
 }

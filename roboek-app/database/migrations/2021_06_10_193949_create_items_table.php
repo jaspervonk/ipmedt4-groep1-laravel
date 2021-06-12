@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateBoekenTable extends Migration
+class CreateItemsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,14 @@ class CreateBoekenTable extends Migration
      */
     public function up()
     {
-        Schema::create('boeken', function (Blueprint $table) {
+        Schema::create('items', function (Blueprint $table) {
             $table->id();
-            $table->string('genre_naam');
-            $table->bigInteger('isbn');
-            $table->string('titel');
-            $table->string('auteur');
+            $table->string('soort');
+            $table->string('naam');
             $table->string('beschrijving');
+            $table->integer('prijs');
+            $table->string('kleur_primary')->nullable();
+            $table->string('kleur_secondary')->nullable();
             $table->string('image');
         });
     }
@@ -31,6 +32,6 @@ class CreateBoekenTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('boeken');
+        Schema::dropIfExists('items');
     }
 }

@@ -17,6 +17,7 @@ class CreateGekozenBoekenTable extends Migration
             $table->id();
             $table->foreignId('boek_id');
             $table->foreignId('user_id');
+            $table->boolean('afgerond')->default(FALSE);
         });
     }
 

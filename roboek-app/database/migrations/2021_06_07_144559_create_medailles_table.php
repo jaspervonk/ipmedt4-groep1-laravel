@@ -18,6 +18,11 @@ class CreateMedaillesTable extends Migration
             $table->string('naam');
             $table->string('beschrijving');
             $table->string('image');
+            $table->integer('threshhold_saldo')->default(0);
+            $table->integer('threshhold_boeken')->default(0);
+            $table->integer('threshhold_items')->default(0);
+            $table->integer('threshhold_uitdagingen')->default(0);
+            $table->integer('threshhold_medailles')->default(0);
         });
     }
 

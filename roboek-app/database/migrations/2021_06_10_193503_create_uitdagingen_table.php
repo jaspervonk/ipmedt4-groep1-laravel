@@ -15,13 +15,13 @@ class CreateUitdagingenTable extends Migration
     {
         Schema::create('uitdagingen', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('boek_id');
-            $table->string('soort');
-            $table->integer('hoofdstuk')->nullable();
+            $table->foreignId('hoofdstuk_id');
+            $table->string('soort')->nullable();
             $table->string('vraag')->nullable();
             $table->string('antwoorden')->nullable();
             $table->string('image')->nullable();
             $table->integer('beloning')->nullable();
+            $table->foreignId('medaille_id')->nullable();
         });
     }
 

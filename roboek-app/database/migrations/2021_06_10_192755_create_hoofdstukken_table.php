@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateItemsTable extends Migration
+class CreateHoofdstukkenTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,11 @@ class CreateItemsTable extends Migration
      */
     public function up()
     {
-        Schema::create('items', function (Blueprint $table) {
+        Schema::create('hoofdstukken', function (Blueprint $table) {
             $table->id();
-            $table->string('soort');
-            $table->string('naam');
-            $table->string('beschrijving');
-            $table->integer('prijs');
-            $table->string('image');
+            $table->foreignId('boek_id');
+            $table->integer('hoofdstuk_nummer');
+            $table->string('titel')->nullable();
         });
     }
 
@@ -30,6 +28,6 @@ class CreateItemsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('items');
+        Schema::dropIfExists('hoofdstukken');
     }
 }
