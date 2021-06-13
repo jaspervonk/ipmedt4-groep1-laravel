@@ -48,7 +48,47 @@ class BoekenTableSeeder extends Seeder
             'auteur' => "Martine Letterie",
             'beschrijving' => "Marie logeert met haar vader op een buitenhuis. Op een ochtend is iedereen in rep en roer, er is een dure gouden munt gestolen. De vader van Marie wordt verdacht. Kan Marie zijn onschuld bewijzen?",
             'image' => "img/default_9789025860806.jpg",
-            'aantal_bladzijdes' => 95,
+        ]);
+
+        DB::table('boeken')->insert([
+            'genre_naam' => "Humor",
+            'isbn' => 9789026148026,
+            'titel' => "Leven van een loser 15 - Kopje-onder",
+            'auteur' => "Jeff Kinney",
+            'beschrijving' => "De familie Botermans strandt op een camperpark. Daar slaat de vakantiestemming om: een epische wolkbreuk en stijgend water… Gaat Bram kopje-onder?",
+            'image' => "img/9789026148026.png",
+        ]);
+
+        DB::table('boeken')->insert([
+            'genre_naam' => "Avontuur",
+            'isbn' => 9789043922760,
+            'titel' => "De zoete zusjes gaan op vakantie",
+            'auteur' => "Hanneke de Zoete",
+            'beschrijving' => "De Zoete Zusjes hebben vakantie! Maar waar gaan Saar en Janna dit jaar hun spannende avonturen beleven?",
+            'image' => "img/9789043922760.jpg",
+        ]);
+
+        DB::table('boeken')->insert([
+            'genre_naam' => "Sprookjes",
+            'isbn' => 9789025774684,
+            'titel' => "Groot Biegel sprookjesboek",
+            'auteur' => "Paul Biegel",
+            'beschrijving' => "
+                Paul Biegel noemde zichzelf ‘een ouderwetse sprookjesschrijver’. 
+                En een rasechte verteller, dat was hij.  
+                Lees bijvoorbeeld een verhaal over een witte zwaan die naar de sterren vliegt, 
+                en eentje over een jongetje dat op wonderbaarlijke wijze zijn lievelingsbeer terugvindt. 
+                Het ‘Groot Biegel sprookjesboek’ is met zijn heerlijke sprookjes een waar genot om voor te lezen. Of om zelf te lezen natuurlijk!",
+            'image' => "img/9789025774684.jpg",
+        ]);
+
+        DB::table('boeken')->insert([
+            'genre_naam' => "Vriendschap en Verliefd",
+            'isbn' => 9789025770457,
+            'titel' => "Dikke Vik en Vieze Lies lachen om liefde",
+            'auteur' => "Sunna Borghuis",
+            'beschrijving' => "Vik en Lies (ik-figuur) vinden al die toestanden rondom Valentijnsdag maar onzin. Maar als Vik enkele activiteiten met de populaire Merel gaat doen, wordt Lies toch wel jaloers.",
+            'image' => "img/9789025770457.jpg",
         ]);
     }
 }

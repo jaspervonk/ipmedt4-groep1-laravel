@@ -45,9 +45,15 @@ class GenresTableSeeder extends Seeder
         ]);
 
         DB::table('genres')->insert([
-            'naam' => "Sprookjes/Fantasie",
+            'naam' => "Fantasie",
             'beschrijving' => "Boeken met betoverende verhalen.",
             'image' => "img/default_sprookjes_fantasie.jpg",
+        ]);
+
+        DB::table('genres')->insert([
+            'naam' => "Sprookjes",
+            'beschrijving' => "Boeken met een wereld vol wonderen!",
+            'image' => "img/default_sprookjes_sprookjes.jpg",
         ]);
 
         DB::table('genres')->insert([
