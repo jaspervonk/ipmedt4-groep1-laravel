@@ -90,5 +90,68 @@ class BoekenTableSeeder extends Seeder
             'beschrijving' => "Vik en Lies (ik-figuur) vinden al die toestanden rondom Valentijnsdag maar onzin. Maar als Vik enkele activiteiten met de populaire Merel gaat doen, wordt Lies toch wel jaloers.",
             'image' => "img/9789025770457.jpg",
         ]);
+
+        DB::table('boeken')->insert([
+            'genre_naam' => "Avontuur",
+            'isbn' => 9789026130977,
+            'titel' => "Het oneindige verhaal",
+            'auteur' => "Michael Ende",
+            'beschrijving' => "TODO",
+            'image' => "img/9789026130977.jpg",
+        ]);
+
+        DB::table('boeken')->insert([
+            'genre_naam' => "Avontuur",
+            'isbn' => 9789021681603,
+            'titel' => "Oma luchtbuks",
+            'auteur' => "Barbara Scholten",
+            'beschrijving' => "TODO",
+            'image' => "img/9789021681603.jpg",
+        ]);
+
+        DB::table('boeken')->insert([
+            'genre_naam' => "Avontuur",
+            'isbn' => 9789025881535,
+            'titel' => "Schreeuw om middernacht",
+            'auteur' => "Benjamin Read",
+            'beschrijving' => "TODO",
+            'image' => "img/9789025881535.jpg",
+        ]);
+
+        DB::table('boeken')->insert([
+            'genre_naam' => "Sprookjes",
+            'isbn' => 9789025871338,
+            'titel' => "Geheimen van het wilde woud",
+            'auteur' => "Tonke Dragt",
+            'beschrijving' => "TODO",
+            'image' => "img/9789025871338.jpg",
+        ]);
+
+        DB::table('boeken')->insert([
+            'genre_naam' => "Sprookjes",
+            'isbn' => 9789492901675,
+            'titel' => "Het heksenhandboek",
+            'auteur' => "Nikki van de Car",
+            'beschrijving' => "TODO",
+            'image' => "img/9789492901675.jpg",
+        ]);
+
+        DB::table('boeken')->insert([
+            'genre_naam' => "Sprookjes",
+            'isbn' => 9789025877262,
+            'titel' => "De ijstuin",
+            'auteur' => "Guy Jones",
+            'beschrijving' => "TODO",
+            'image' => "img/9789025877262.jpg",
+        ]);
+
+        DB::table('boeken')->insert([
+            'genre_naam' => "Griezelverhaal",
+            'isbn' => 9789025871406,
+            'titel' => "De griezelbus 1",
+            'auteur' => "Paul van Loon",
+            'beschrijving' => "TODO",
+            'image' => "img/9789025871406.jpg",
+        ]);
     }
 }
