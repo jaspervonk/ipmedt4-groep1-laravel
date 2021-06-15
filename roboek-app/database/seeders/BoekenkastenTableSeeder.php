@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use DB;
 
-class BoekenkastTableSeeder extends Seeder
+class BoekenkastenTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,7 +14,7 @@ class BoekenkastTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('boekenkast')->insert([
+        DB::table('boekenkasten')->insert([
             'user_id' => 1,
             'medaille_id_slot1' => 1,
             'medaille_id_slot2' => 2,
@@ -24,7 +24,7 @@ class BoekenkastTableSeeder extends Seeder
             'item_id_slot1' => 3,
         ]);
 
-        DB::table('boekenkast')->insert([
+        DB::table('boekenkasten')->insert([
             'user_id' => 2,
             'medaille_id_slot1' => 1,
             'medaille_id_slot2' => 2,
@@ -32,7 +32,7 @@ class BoekenkastTableSeeder extends Seeder
             'item_id_slot1' => 3,
         ]);
 
-        DB::table('boekenkast')->insert([
+        DB::table('boekenkasten')->insert([
             'user_id' => 3,
             'medaille_id_slot1' => 2,
         ]);
