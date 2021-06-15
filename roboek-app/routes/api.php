@@ -23,5 +23,6 @@ Route::get('/bibliotheek', [\App\Http\Controllers\BibliotheekController::class, 
 Route::get('/bibliotheek/details/{id}', [\App\Http\Controllers\BibliotheekController::class, 'show']);
 Route::get('/bibliotheek/{genre}', [\App\Http\Controllers\BibliotheekController::class, 'showGenre']);
 Route::get('/bibliotheek/choose/genre', [\App\Http\Controllers\BibliotheekController::class, 'chooseGenre']);
+//-----
 Route::post('/bibliotheek/favorite/{id}', [\App\Http\Controllers\BibliotheekController::class, 'addToFavorites']);
 Route::delete('/bibliotheek/favorite/{id}', [\App\Http\Controllers\BibliotheekController::class, 'deleteFromFavorites']);

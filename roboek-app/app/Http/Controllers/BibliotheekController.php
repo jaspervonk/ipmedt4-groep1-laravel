@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+use Response;
 
 class BibliotheekController extends Controller
 {
@@ -15,15 +16,20 @@ class BibliotheekController extends Controller
         return \App\Models\boeken::where('id', '=', $id)->get();
     }
 
-    public function showGenre($genre){
-        return \App\Models\boeken::where('genre_naam', '=', $genre)->get();
+    public function showGenre($genre, \App\Models\favoriete_boeken $boeken){
+        $boekenVanGenre = \App\Models\boeken::where('genre_naam', '=', $genre)->get(); 
+        $favoBoeken = $boeken::where('user_id', '=', 1)->pluck('boek_id');
+        return Response::json(array(
+            'boeken' => $boekenVanGenre,
+            'favorieten' => $favoBoeken
+        ));
     }
 
     public function chooseGenre(){
         return \App\Models\genres::all();
     }
 
-    public function addToFavorites($id, Request $request, \App\Models\gekozen_boeken $boeken){
+    public function addToFavorites($id, Request $request, \App\Models\favoriete_boeken $boeken){
         $boeken->boek_id = $id;
         $boeken->user_id = 1;
         $boeken->save();
