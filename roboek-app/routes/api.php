@@ -17,3 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/items', [\App\Http\Controllers\ItemController::class, 'soorten']);
+Route::get('/behaalde_items/{user_id}', [\App\Http\Controllers\BehaaldeItemController::class, 'index']);

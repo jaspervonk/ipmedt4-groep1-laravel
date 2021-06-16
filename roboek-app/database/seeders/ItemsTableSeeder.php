@@ -35,6 +35,26 @@ class ItemsTableSeeder extends Seeder
         ]);
 
         DB::table('items')->insert([
+            'soort' => "Kastkleur",
+            'naam' => "Kastkleur bruin",
+            'beschrijving' => "De kleur van je kast wordt bruin.",
+            'prijs' => 200,
+            'kleur_primary'=> "#1F81DC",
+            'kleur_secondary'=> "#374B92",
+            'image' => "img/default_item_color.png",
+        ]);
+
+        DB::table('items')->insert([
+            'soort' => "Kastkleur",
+            'naam' => "Kastkleur roze",
+            'beschrijving' => "De kleur van je kast wordt roze.",
+            'prijs' => 200,
+            'kleur_primary'=> "#1F81DC",
+            'kleur_secondary'=> "#374B92",
+            'image' => "img/default_item_color.png",
+        ]);
+
+        DB::table('items')->insert([
             'soort' => "Kastdecoratie",
             'naam' => "Troffee",
             'beschrijving' => "Dit is een troffee voor op je kast!",
@@ -43,9 +63,26 @@ class ItemsTableSeeder extends Seeder
         ]);
 
         DB::table('items')->insert([
+            'soort' => "Kastdecoratie",
+            'naam' => "Bril",
+            'beschrijving' => "Dit is de magische bril van Harry Potter!",
+            'prijs' => 400,
+            'image' => "img/default_item_color.png",
+        ]);
+
+        DB::table('items')->insert([
             'soort' => "Robotkleur",
             'naam' => "Robotkleur paars",
             'beschrijving' => "Hiermee wordt de kleur van Roboek paars!",
+            'prijs' => 300,
+            'kleur_primary'=> "#B61FDC",
+            'image' => "img/default_item_color.png",
+        ]);
+
+        DB::table('items')->insert([
+            'soort' => "Robotkleur",
+            'naam' => "Robotkleur blauw",
+            'beschrijving' => "Hiermee wordt de kleur van Roboek blauw!",
             'prijs' => 300,
             'kleur_primary'=> "#B61FDC",
             'image' => "img/default_item_color.png",
