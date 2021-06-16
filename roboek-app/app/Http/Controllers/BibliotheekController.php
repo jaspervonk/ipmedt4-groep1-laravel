@@ -12,7 +12,13 @@ class BibliotheekController extends Controller
         return \App\Models\boeken::all();
     }
 
-    public function show($id){
+    public function show($id, \App\Models\gekozen_boeken $boeken){
+        $boek = \App\Models\boeken::where('id', '=', $id)->get(); 
+        $gekozenBoeken = $boeken::where('user_id', '=', 1)->pluck('boek_id');
+        return Response::json(array(
+            'boeken' => $boek,
+            'gekozen' => $gekozenBoeken
+        ));
         return \App\Models\boeken::where('id', '=', $id)->get();
     }
 
@@ -27,6 +33,13 @@ class BibliotheekController extends Controller
 
     public function chooseGenre(){
         return \App\Models\genres::all();
+    }
+
+    public function addToBoekenlijst($id, Request $request, \App\Models\gekozen_boeken $boeken){
+        $boeken->boek_id = $id;
+        $boeken->user_id = 1;
+        $boeken->save();
+        return response()->json([$request->all()]);
     }
 
     public function addToFavorites($id, Request $request, \App\Models\favoriete_boeken $boeken){
