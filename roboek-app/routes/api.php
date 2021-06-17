@@ -29,3 +29,6 @@ Route::post('/bibliotheek/favorite/{id}', [\App\Http\Controllers\BibliotheekCont
 Route::delete('/bibliotheek/favorite/{id}', [\App\Http\Controllers\BibliotheekController::class, 'deleteFromFavorites']);
 
 Route::post('/user/create', [\App\Http\Controllers\UserController::class, 'store']);
+
+//ROUTES VOOR PUZZELS:
+Route::get('/puzzel/{id}', [\App\Http\Controllers\PuzzelController::class, 'show']);
