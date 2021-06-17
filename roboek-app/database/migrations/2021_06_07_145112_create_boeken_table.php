@@ -19,7 +19,7 @@ class CreateBoekenTable extends Migration
             $table->bigInteger('isbn');
             $table->string('titel');
             $table->string('auteur');
-            $table->string('beschrijving');
+            $table->longText('beschrijving');
             $table->string('image');
         });
     }

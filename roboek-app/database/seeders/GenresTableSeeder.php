@@ -21,14 +21,8 @@ class GenresTableSeeder extends Seeder
         ]);
 
         DB::table('genres')->insert([
-            'naam' => "Detective",
-            'beschrijving' => "Boeken waar een mysterie wordt opgelost.",
-            'image' => "img/default_detective.jpg",
-        ]);
-
-        DB::table('genres')->insert([
-            'naam' => "Dieren",
-            'beschrijving' => "Boeken met dieren.",
+            'naam' => "Dieren en natuur",
+            'beschrijving' => "Boeken over dieren en natuur.",
             'image' => "img/default_dieren.jpg",
         ]);
 
@@ -39,39 +33,9 @@ class GenresTableSeeder extends Seeder
         ]);
 
         DB::table('genres')->insert([
-            'naam' => "Historisch verhaal",
-            'beschrijving' => "Boeken over het verleden.",
-            'image' => "img/default_historisch_verhaal.jpg",
-        ]);
-
-        DB::table('genres')->insert([
             'naam' => "Humor",
             'beschrijving' => "Boeken die je aan het lachen maken.",
             'image' => "img/default_humor.jpg",
-        ]);
-
-        DB::table('genres')->insert([
-            'naam' => "Oorlog en Verzet",
-            'beschrijving' => "Boeken over de oorlog.",
-            'image' => "img/default_oorlog_en_verzet.jpg",
-        ]);
-
-        DB::table('genres')->insert([
-            'naam' => "Psychologisch Verhaal",
-            'beschrijving' => "Boeken waarin mensen elkaar willen begrijpen.",
-            'image' => "img/default_psychologisch_verhaal.jpg",
-        ]);
-
-        DB::table('genres')->insert([
-            'naam' => "School",
-            'beschrijving' => "Boeken over school.",
-            'image' => "img/default_school.jpg",
-        ]);
-
-        DB::table('genres')->insert([
-            'naam' => "Sociaal/Politiek Verhaal",
-            'beschrijving' => "Boeken die gaan over hoe mensen met elkaar omgaan.",
-            'image' => "img/default_sociaal_politiek_verhaal.jpg",
         ]);
 
         DB::table('genres')->insert([
@@ -81,15 +45,15 @@ class GenresTableSeeder extends Seeder
         ]);
 
         DB::table('genres')->insert([
-            'naam' => "Sport",
-            'beschrijving' => "Boeken over sport.",
-            'image' => "img/default_sport.jpg",
+            'naam' => "Fantasie",
+            'beschrijving' => "Boeken met betoverende verhalen.",
+            'image' => "img/default_sprookjes_fantasie.jpg",
         ]);
 
         DB::table('genres')->insert([
-            'naam' => "Sprookjes/Fantasie",
-            'beschrijving' => "Boeken met betoverende verhalen.",
-            'image' => "img/default_sprookjes_fantasie.jpg",
+            'naam' => "Sprookjes",
+            'beschrijving' => "Boeken met een wereld vol wonderen!",
+            'image' => "img/default_sprookjes_sprookjes.jpg",
         ]);
 
         DB::table('genres')->insert([
