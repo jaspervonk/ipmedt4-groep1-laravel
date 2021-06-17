@@ -39,7 +39,7 @@ class ItemsTableSeeder extends Seeder
             'naam' => "Troffee",
             'beschrijving' => "Dit is een troffee voor op je kast!",
             'prijs' => 400,
-            'image' => "img/default_item_color.png",
+            'image' => "img/item_troffee.png",
         ]);
 
         DB::table('items')->insert([
