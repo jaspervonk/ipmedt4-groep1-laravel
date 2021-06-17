@@ -35,6 +35,31 @@ class BibliotheekController extends Controller
         return \App\Models\genres::all();
     }
 
+    public function addToFavorites($id, Request $request, \App\Models\favoriete_boeken $boeken){
+        $boeken->boek_id = $id;
+        $boeken->user_id = 1;
+        $boeken->save();
+        //-------------------
+        $boekenVanGenre = \App\Models\boeken::where('genre_naam', '=', $request->genre)->get(); 
+        $favoBoeken = $boeken::where('user_id', '=', 1)->pluck('boek_id');
+        return Response::json(array(
+            'boeken' => $boekenVanGenre,
+            'favorieten' => $favoBoeken
+        ));
+    }
+
+    public function deleteFromFavorites($id, Request $request, \App\Models\favoriete_boeken $boeken){
+        DB::table('favoriete_boeken')->where('id', '=', $id)->delete();
+        //-------------------
+        return $request->all();
+        // $boekenVanGenre = \App\Models\boeken::where('genre_naam', '=', $request->genre)->get(); 
+        // $favoBoeken = $boeken::where('user_id', '=', 1)->pluck('boek_id');
+        // return Response::json(array(
+        //     'boeken' => $boekenVanGenre,
+        //     'favorieten' => $favoBoeken
+        // ));
+    }
+
     public function addToBoekenlijst($id, Request $request, \App\Models\gekozen_boeken $boeken){
         $boeken->boek_id = $id;
         $boeken->user_id = 1;
@@ -47,17 +72,6 @@ class BibliotheekController extends Controller
             'gekozen' => $gekozenBoeken
         ));
         return \App\Models\boeken::where('id', '=', $id)->get();
-    }
-
-    public function addToFavorites($id, Request $request, \App\Models\favoriete_boeken $boeken){
-        $boeken->boek_id = $id;
-        $boeken->user_id = 1;
-        $boeken->save();
-        return response()->json([$request->all()]);
-    }
-
-    public function deleteFromFavorites($id){
-        DB::table('favoriete_boeken')->where('id', '=', $id)->delete();
     }
 
     public function deleteFromBoekenlijst($id, Request $request, \App\Models\gekozen_boeken $boeken){
