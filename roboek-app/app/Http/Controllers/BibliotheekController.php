@@ -39,7 +39,14 @@ class BibliotheekController extends Controller
         $boeken->boek_id = $id;
         $boeken->user_id = 1;
         $boeken->save();
-        return response()->json([$request->all()]);
+        //-------------------
+        $boek = \App\Models\boeken::where('id', '=', $id)->get(); 
+        $gekozenBoeken = $boeken::where('user_id', '=', 1)->pluck('boek_id');
+        return Response::json(array(
+            'boeken' => $boek,
+            'gekozen' => $gekozenBoeken
+        ));
+        return \App\Models\boeken::where('id', '=', $id)->get();
     }
 
     public function addToFavorites($id, Request $request, \App\Models\favoriete_boeken $boeken){
@@ -50,6 +57,18 @@ class BibliotheekController extends Controller
     }
 
     public function deleteFromFavorites($id){
-        DB::table('gekozen_boeken')->where('id', '=', $id)->delete();
+        DB::table('favoriete_boeken')->where('id', '=', $id)->delete();
+    }
+
+    public function deleteFromBoekenlijst($id, Request $request, \App\Models\gekozen_boeken $boeken){
+        DB::table('gekozen_boeken')->where('boek_id', '=', $id)->delete();
+        //-------------------
+        $boek = \App\Models\boeken::where('id', '=', $id)->get(); 
+        $gekozenBoeken = $boeken::where('user_id', '=', 1)->pluck('boek_id');
+        return Response::json(array(
+            'boeken' => $boek,
+            'gekozen' => $gekozenBoeken
+        ));
+        return \App\Models\boeken::where('id', '=', $id)->get();
     }
 }
