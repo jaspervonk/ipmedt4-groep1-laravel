@@ -28,3 +28,9 @@ Route::get('/bibliotheek/{genre}', [\App\Http\Controllers\BibliotheekController:
 Route::get('/bibliotheek/choose/genre', [\App\Http\Controllers\BibliotheekController::class, 'chooseGenre']);
 Route::post('/bibliotheek/favorite/{id}', [\App\Http\Controllers\BibliotheekController::class, 'addToFavorites']);
 Route::delete('/bibliotheek/favorite/{id}', [\App\Http\Controllers\BibliotheekController::class, 'deleteFromFavorites']);
+
+// Routes voor de gebruikers
+Route::post('/user/create', [\App\Http\Controllers\UserController::class, 'store']);
+
+// Routes voor de puzzels
+Route::get('/puzzel/{id}', [\App\Http\Controllers\PuzzelController::class, 'show']);
