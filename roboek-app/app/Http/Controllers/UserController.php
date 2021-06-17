@@ -17,9 +17,8 @@ class UserController extends Controller
         //    'naam' => 'voornaam',
         //    'password' => 'leukenaam'
         //]);
-    
 
-        $users->name = $request->voornaam;
+        $users->naam = $request->voornaam;
         $users->password = $request->leukenaam;
 
         $users->save();
