@@ -15,7 +15,8 @@ class ItemController extends Controller
     }
 
     public function soorten(){
-        return ['kastkleuren' => \App\Models\Item::where("soort", "=", "Kastkleur")->get(),
+        return ['items' => \App\Models\Item::all(),
+                'kastkleuren' => \App\Models\Item::where("soort", "=", "Kastkleur")->get(),
                 'robotkleuren' => \App\Models\Item::where("soort", "=", "Robotkleur")->get(),
                 'kastdecoraties' => \App\Models\Item::where("soort", "=", "Kastdecoratie")->get(),
                 ];
