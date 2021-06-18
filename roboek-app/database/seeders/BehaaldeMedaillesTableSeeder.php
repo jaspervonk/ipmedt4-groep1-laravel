@@ -59,5 +59,20 @@ class BehaaldeMedaillesTableSeeder extends Seeder
             'user_id' => 1,
         ]);
 
+        DB::table('behaalde_medailles')->insert([
+            'medaille_id' => 6,
+            'user_id' => 1,
+        ]);
+
+        DB::table('behaalde_medailles')->insert([
+            'medaille_id' => 6,
+            'user_id' => 2,
+        ]);
+
+        DB::table('behaalde_medailles')->insert([
+            'medaille_id' => 6,
+            'user_id' => 3,
+        ]);
+
     }
 }
