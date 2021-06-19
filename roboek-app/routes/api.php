@@ -39,3 +39,5 @@ Route::get('/puzzel/{id}', [\App\Http\Controllers\PuzzelController::class, 'show
 //ROUTES VOOR BOEKENLIJST:
 Route::post('/boekenlijst/add/{id}', [\App\Http\Controllers\BibliotheekController::class, 'addToBoekenlijst']);
 Route::delete('/boekenlijst/delete/{id}', [\App\Http\Controllers\BibliotheekController::class, 'deleteFromBoekenlijst']);
+
+Route::get('/boekenlijst/{id}', [\App\Http\Controllers\BoekenlijstController::class, 'gekozenBoeken']);
