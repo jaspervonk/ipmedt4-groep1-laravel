@@ -19,7 +19,6 @@ class DatabaseSeeder extends Seeder
             BehaaldeMedaillesTableSeeder::class,
             GenresTableSeeder::class,
             BoekenTableSeeder::class,
-            GekozenBoekenTableSeeder::class,
             HoofdstukkenTableSeeder::class,
             GelezenHoofdstukkenTableSeeder::class,
             SoortenUitdagingenTableSeeder::class,

@@ -9,21 +9,21 @@ use Response;
 class BibliotheekController extends Controller
 {
     public function index(){
-        return \App\Models\boeken::all();
+        return \App\Models\Boek::all();
     }
 
-    public function show($id, \App\Models\gekozen_boeken $boeken){
-        $boek = \App\Models\boeken::where('id', '=', $id)->get(); 
+    public function show($id, \App\Models\GekozenBoek $boeken){
+        $boek = \App\Models\Boek::where('id', '=', $id)->get(); 
         $gekozenBoeken = $boeken::where('user_id', '=', 1)->pluck('boek_id');
         return Response::json(array(
             'boeken' => $boek,
             'gekozen' => $gekozenBoeken
         ));
-        return \App\Models\boeken::where('id', '=', $id)->get();
+        return \App\Models\Boek::where('id', '=', $id)->get();
     }
 
-    public function showGenre($genre, \App\Models\favoriete_boeken $boeken){
-        $boekenVanGenre = \App\Models\boeken::where('genre_naam', '=', $genre)->get(); 
+    public function showGenre($genre, \App\Models\FavorieteBoeken $boeken){
+        $boekenVanGenre = \App\Models\Boek::where('genre_naam', '=', $genre)->get(); 
         $favoBoeken = $boeken::where('user_id', '=', 1)->pluck('boek_id');
         return Response::json(array(
             'boeken' => $boekenVanGenre,
@@ -32,15 +32,15 @@ class BibliotheekController extends Controller
     }
 
     public function chooseGenre(){
-        return \App\Models\genres::all();
+        return \App\Models\Genre::all();
     }
 
-    public function addToFavorites($id, Request $request, \App\Models\favoriete_boeken $boeken){
+    public function addToFavorites($id, Request $request, \App\Models\FavorieteBoeken $boeken){
         $boeken->boek_id = $id;
         $boeken->user_id = 1;
         $boeken->save();
         //-------------------
-        $boekenVanGenre = \App\Models\boeken::where('genre_naam', '=', $request->genre)->get(); 
+        $boekenVanGenre = \App\Models\Boek::where('genre_naam', '=', $request->genre)->get(); 
         $favoBoeken = $boeken::where('user_id', '=', 1)->pluck('boek_id');
         return Response::json(array(
             'boeken' => $boekenVanGenre,
@@ -48,7 +48,7 @@ class BibliotheekController extends Controller
         ));
     }
 
-    public function deleteFromFavorites($id, Request $request, \App\Models\favoriete_boeken $boeken){
+    public function deleteFromFavorites($id, Request $request, \App\Models\FavorieteBoeken $boeken){
         DB::table('favoriete_boeken')->where('id', '=', $id)->delete();
         //-------------------
         $validatedData = $request->validate([
@@ -59,29 +59,29 @@ class BibliotheekController extends Controller
         return json_encode($validatedData);
     }
 
-    public function addToBoekenlijst($id, Request $request, \App\Models\gekozen_boeken $boeken){
+    public function addToBoekenlijst($id, Request $request, \App\Models\GekozenBoek $boeken){
         $boeken->boek_id = $id;
         $boeken->user_id = 1;
         $boeken->save();
         //-------------------
-        $boek = \App\Models\boeken::where('id', '=', $id)->get(); 
+        $boek = \App\Models\Boek::where('id', '=', $id)->get(); 
         $gekozenBoeken = $boeken::where('user_id', '=', 1)->pluck('boek_id');
         return Response::json(array(
             'boeken' => $boek,
             'gekozen' => $gekozenBoeken
         ));
-        return \App\Models\boeken::where('id', '=', $id)->get();
+        return \App\Models\Boek::where('id', '=', $id)->get();
     }
 
-    public function deleteFromBoekenlijst($id, Request $request, \App\Models\gekozen_boeken $boeken){
+    public function deleteFromBoekenlijst($id, Request $request, \App\Models\GekozenBoek $boeken){
         DB::table('gekozen_boeken')->where('boek_id', '=', $id)->delete();
         //-------------------
-        $boek = \App\Models\boeken::where('id', '=', $id)->get(); 
+        $boek = \App\Models\Boek::where('id', '=', $id)->get(); 
         $gekozenBoeken = $boeken::where('user_id', '=', 1)->pluck('boek_id');
         return Response::json(array(
             'boeken' => $boek,
             'gekozen' => $gekozenBoeken
         ));
-        return \App\Models\boeken::where('id', '=', $id)->get();
+        return \App\Models\Boek::where('id', '=', $id)->get();
     }
 }
