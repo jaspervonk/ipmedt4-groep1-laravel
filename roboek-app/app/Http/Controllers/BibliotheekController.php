@@ -51,7 +51,12 @@ class BibliotheekController extends Controller
     public function deleteFromFavorites($id, Request $request, \App\Models\favoriete_boeken $boeken){
         DB::table('favoriete_boeken')->where('id', '=', $id)->delete();
         //-------------------
-        return $request->all();
+        $validatedData = $request->validate([
+            id => 'nullable',
+            genre => 'nullable'
+        ]);
+
+        return json_encode($validatedData);
         // $boekenVanGenre = \App\Models\boeken::where('genre_naam', '=', $request->genre)->get(); 
         // $favoBoeken = $boeken::where('user_id', '=', 1)->pluck('boek_id');
         // return Response::json(array(
