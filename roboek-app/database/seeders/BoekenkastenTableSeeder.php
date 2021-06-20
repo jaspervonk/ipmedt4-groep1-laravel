@@ -17,11 +17,11 @@ class BoekenkastenTableSeeder extends Seeder
         DB::table('boekenkasten')->insert([
             'user_id' => 1,
             'medaille_id_slot1' => 6,
-            'medaille_id_slot2' => 1,
-            'medaille_id_slot3' => 2,
-            'medaille_id_slot4' => 3,
-            'medaille_id_slot5' => 4,
-            'medaille_id_slot6' => 5,
+            'medaille_id_slot2' => 5,
+            'medaille_id_slot3' => 3,
+            'medaille_id_slot4' => 4,
+            'medaille_id_slot5' => 1,
+            'medaille_id_slot7' => 2,
             'item_id_slot1' => 3,
         ]);
 

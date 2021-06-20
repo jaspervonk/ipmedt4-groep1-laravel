@@ -54,5 +54,10 @@ class MedaillesTableSeeder extends Seeder
             'image' => "img/medaille_6.png",
         ]);
 
+        DB::table('medailles')->insert([
+            'naam' => "Welkom bij Roboek!",
+            'beschrijving' => "Je bent nieuw bij Roboek!",
+            'image' => "img/default_empty_slot.png",
+        ]);
     }
 }

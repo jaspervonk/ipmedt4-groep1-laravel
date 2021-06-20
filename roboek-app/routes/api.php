@@ -20,6 +20,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 // Routes voor de boekenkast
 Route::get('/boekenkast/{id}', [App\Http\Controllers\BoekenkastenController::class, 'show']);
+Route::put('/boekenkast/update/medaille/{id}', [App\Http\Controllers\BoekenkastenController::class, 'updateMedaille']);
+Route::put('/boekenkast/update/item/{id}', [App\Http\Controllers\BoekenkastenController::class, 'updateItem']);
 
 // Routes voor de virtuele bibliotheek
 Route::get('/bibliotheek', [\App\Http\Controllers\BibliotheekController::class, 'index']);
