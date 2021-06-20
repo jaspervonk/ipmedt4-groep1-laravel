@@ -9,6 +9,7 @@ class BoekenkastenController extends Controller
     public function show($id){
         // Haal alle Medailles op uit de boekenkast stop ze in een array om mee te geven
         $boekenkastMedailles = array();
+        // Loop door alle 8 Medaille Slots
         for($i = 1; $i <= 8; $i++){
             $medaille_id = \App\Models\Boekenkast::where('user_id', '=', $id)->value('medaille_id_slot' . $i);
             // Als er een Medaille in een Slot staat; voeg deze toe
@@ -62,5 +63,17 @@ class BoekenkastenController extends Controller
                 'boekenkast_items' => $boekenkastItems,
                 'behaalde_medailles' => $behaaldeMedailles,
                 'behaalde_items' => $behaaldeItems];
+    }
+
+    public function updateMedaille($id, Request $request, \App\Models\Boekenkast $Boekenkast){
+        // Voor de meegegeven user; Update het request slot naar het medaille_id uit de request
+        $Boekenkast::where('user_id', '=', $id)->update(['medaille_id_slot' . $request->slot => $request->medaille_id]);
+        return;
+    }
+
+    public function updateItem($id, Request $request, \App\Models\Boekenkast $Boekenkast){
+        // Voor de meegegeven user; Update het request slot naar het item_id uit de request
+        $Boekenkast::where('user_id', '=', $id)->update(['item_id_slot' . $request->slot => $request->item_id]);
+        return;
     }
 }
