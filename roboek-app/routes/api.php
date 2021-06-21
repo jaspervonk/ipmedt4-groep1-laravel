@@ -18,5 +18,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/items', [\App\Http\Controllers\ItemController::class, 'soorten']);
-Route::get('/behaalde_items/{user_id}', [\App\Http\Controllers\BehaaldeItemController::class, 'index']);
+Route::get('/winkel/{id}', [\App\Http\Controllers\ItemController::class, 'soorten']);
+Route::put('/winkel/updateItem/{id}', [\App\Http\Controller\ItemController::class, 'updateColor']);
