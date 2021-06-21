@@ -15,18 +15,11 @@ class UitdagingenTableSeeder extends Seeder
     public function run()
     {
         DB::table('uitdagingen')->insert([
-            'hoofdstuk_id' => 1,
+            'hoofdstuk_id' => 2,
             'soort' => "Woordzoeker",
-            'vraag' => "Zoek de woorden in de woordzoeker",
+            'vraag' => "0000000000000leon0000weerwolf0d00000u000o0000bril0l00000a000f0rood0m00j000000a00etimmiea000000000n00",
+            'antwoorden' => "weerwolf maan dolfje timmie noura leo rood bril" ,
             'beloning' => 100,
-        ]);
-
-        DB::table('uitdagingen')->insert([
-            'hoofdstuk_id' => 3,
-            'soort' => "Vraag",
-            'vraag' => "Wat heeft dolfje weerwolfje gedaan om mevrouw Krijtjes boos is?",
-            'antwoorden' => "Hij heeft één van haar kippen opgegeten.",
-            'medaille_id' => 5,
         ]);
     }
 }

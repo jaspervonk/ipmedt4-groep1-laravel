@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateBoekenTable extends Migration
+class CreateFavorieteBoekenTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,10 @@ class CreateBoekenTable extends Migration
      */
     public function up()
     {
-        Schema::create('boeken', function (Blueprint $table) {
+        Schema::create('favoriete_boeken', function (Blueprint $table) {
             $table->id();
-            $table->string('genre_naam');
-            $table->bigInteger('isbn');
-            $table->string('titel');
-            $table->string('auteur');
-            $table->longText('beschrijving');
-            $table->string('image');
+            $table->foreignId('boek_id');
+            $table->foreignId('user_id');
         });
     }
 
@@ -31,6 +27,6 @@ class CreateBoekenTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('boeken');
+        Schema::dropIfExists('favoriete_boeken');
     }
 }

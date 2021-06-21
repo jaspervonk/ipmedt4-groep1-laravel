@@ -17,36 +17,47 @@ class MedaillesTableSeeder extends Seeder
         DB::table('medailles')->insert([
             'naam' => "Eerste boek!",
             'beschrijving' => "Je hebt je eerste boek gelezen. Mogen er nog veel volgen!",
-            'image' => "img/default_medaille.png",
+            'image' => "img/medaille_1.png",
             'threshhold_boeken' => 1,
         ]);
 
         DB::table('medailles')->insert([
             'naam' => "Eerste uitdaging!",
             'beschrijving' => "Je hebt je eerste uitdaging gehaald!",
-            'image' => "img/default_medaille.png",
+            'image' => "img/medaille_2.png",
             'threshhold_uitdagingen' => 1,
         ]);
 
         DB::table('medailles')->insert([
             'naam' => "100 Munten!",
             'beschrijving' => "Je hebt ooit 100 munten gehad!",
-            'image' => "img/default_medaille.png",
+            'image' => "img/medaille_3.png",
             'threshhold_saldo' => 100,
         ]);
 
         DB::table('medailles')->insert([
             'naam' => "1000 Munten!",
             'beschrijving' => "Je hebt ooit 1000 munten gehad!",
-            'image' => "img/default_medaille.png",
+            'image' => "img/medaille_4.png",
             'threshhold_saldo' => 1000,
         ]);
 
         DB::table('medailles')->insert([
             'naam' => "Ahoooe!!!",
             'beschrijving' => "Je hebt Dolfje Weerwolfje afgerond!",
-            'image' => "img/default_medaille.png",
+            'image' => "img/medaille_5.png",
         ]);
 
+        DB::table('medailles')->insert([
+            'naam' => "Welkom bij Roboek!",
+            'beschrijving' => "Je bent nieuw bij Roboek!",
+            'image' => "img/medaille_6.png",
+        ]);
+
+        DB::table('medailles')->insert([
+            'naam' => "Welkom bij Roboek!",
+            'beschrijving' => "Je bent nieuw bij Roboek!",
+            'image' => "img/default_empty_slot.png",
+        ]);
     }
 }

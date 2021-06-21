@@ -15,7 +15,7 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         DB::table('users')->insert([
-            'name' => "Jeroen Rijsdijk",
+            'naam' => "Jeroen Rijsdijk",
             'email' => "rijsdijk.j@hsleiden.nl",
             'password' => bcrypt("laravel"),
             'saldo' => 10000,
@@ -25,7 +25,7 @@ class UsersTableSeeder extends Seeder
         ]);
 
         DB::table('users')->insert([
-            'name' => "Jasper Vonk",
+            'naam' => "Jasper Vonk",
             'email' => "s1122268@student.hsleiden.nl",
             'password' => bcrypt("laravel"),
             'saldo' => 420,
@@ -35,7 +35,7 @@ class UsersTableSeeder extends Seeder
         ]);
 
         DB::table('users')->insert([
-            'name' => "Teresa Dinh",
+            'naam' => "Teresa Dinh",
             'email' => "s1120553@student.hsleiden.nl",
             'password' => bcrypt("laravel"),
             'saldo' => 40,

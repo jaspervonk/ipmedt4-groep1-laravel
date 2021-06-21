@@ -25,5 +25,9 @@ class SoortenItemsTableSeeder extends Seeder
         DB::table('soorten_items')->insert([
             'naam' => "Robotkleur",
         ]);
+
+        DB::table('soorten_items')->insert([
+            'naam' => "Placeholder",
+        ]);
     }
 }

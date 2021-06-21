@@ -19,7 +19,6 @@ class DatabaseSeeder extends Seeder
             BehaaldeMedaillesTableSeeder::class,
             GenresTableSeeder::class,
             BoekenTableSeeder::class,
-            GekozenBoekenTableSeeder::class,
             HoofdstukkenTableSeeder::class,
             GelezenHoofdstukkenTableSeeder::class,
             SoortenUitdagingenTableSeeder::class,
@@ -28,7 +27,8 @@ class DatabaseSeeder extends Seeder
             SoortenItemsTableSeeder::class,
             ItemsTableSeeder::class,
             BehaaldeItemsTableSeeder::class,
-            BoekenkastTableSeeder::class,
+            BoekenkastenTableSeeder::class,
+            GekozenBoekenTableSeeder::class,
         ]);
     }
 }

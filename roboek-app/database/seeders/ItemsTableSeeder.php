@@ -59,7 +59,7 @@ class ItemsTableSeeder extends Seeder
             'naam' => "Troffee",
             'beschrijving' => "Dit is een troffee voor op je kast!",
             'prijs' => 400,
-            'image' => "img/default_item_color.png",
+            'image' => "img/item_troffee.png",
         ]);
 
         DB::table('items')->insert([
@@ -80,6 +80,15 @@ class ItemsTableSeeder extends Seeder
         ]);
 
         DB::table('items')->insert([
+            'soort' => "Placeholder",
+            'naam' => "Leeg kastdecoratie",
+            'beschrijving' => "Je kan hier een item plaatsen!",
+            'prijs' => 0,
+            'kleur_primary'=> "#B61FDC",
+            'image' => "img/default_empty_slot.png",
+        ]);
+
+        DB::table('items')->insert([
             'soort' => "Robotkleur",
             'naam' => "Robotkleur blauw",
             'beschrijving' => "Hiermee wordt de kleur van Roboek blauw!",
@@ -87,5 +96,6 @@ class ItemsTableSeeder extends Seeder
             'kleur_primary'=> "#3687b5",
             'image' => "img/default_item_color.png",
         ]);
+
     }
 }

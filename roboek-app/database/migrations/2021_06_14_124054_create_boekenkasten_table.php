@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateBoekenkastTable extends Migration
+class CreateBoekenkastenTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,8 @@ class CreateBoekenkastTable extends Migration
      */
     public function up()
     {
-        Schema::create('boekenkast', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('user_id');
+        Schema::create('boekenkasten', function (Blueprint $table) {
+            $table->id('user_id');
             $table->string('robot_kleur')->default("#90c2c4");
             $table->string('kast_kleur_primary')->default("#38290f");
             $table->string('kast_kleur_secondary')->default("#110d05");
@@ -43,6 +42,6 @@ class CreateBoekenkastTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('boekenkast');
+        Schema::dropIfExists('boekenkasten');
     }
 }
