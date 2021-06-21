@@ -8,8 +8,13 @@ use Response;
 
 class BibliotheekController extends Controller
 {
-    public function index(){
-        return \App\Models\Boek::all();
+    public function index(\App\Models\GekozenBoek $boeken){
+        $boekenVanGenre = \App\Models\Boek::all(); 
+        $favoBoeken = $boeken::where('user_id', '=', 1)->pluck('boek_id');
+        return Response::json(array(
+            'boeken' => $boekenVanGenre,
+            'favorieten' => $favoBoeken
+        ));
     }
 
     public function show($id, \App\Models\GekozenBoek $boeken){
