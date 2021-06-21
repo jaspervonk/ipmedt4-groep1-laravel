@@ -37,6 +37,9 @@ Route::post('/user/create', [\App\Http\Controllers\UserController::class, 'store
 
 // Routes voor de puzzels
 Route::get('/puzzel/{id}', [\App\Http\Controllers\PuzzelController::class, 'show']);
+Route::get('/medaille/{id}', [\App\Http\Controllers\PuzzelController::class, 'showMedaille']);
+Route::post('/verdienmedaille/{id}/{medaille}', [\App\Http\Controllers\PuzzelController::class, 'geefMedaille']);
+Route::patch('/puzzelklaar/{id}/{muntjes}', [\App\Http\Controllers\PuzzelController::class, 'geefMuntjes']);
 
 //ROUTES VOOR BOEKENLIJST:
 Route::post('/boekenlijst/add/{id}', [\App\Http\Controllers\BibliotheekController::class, 'addToBoekenlijst']);
