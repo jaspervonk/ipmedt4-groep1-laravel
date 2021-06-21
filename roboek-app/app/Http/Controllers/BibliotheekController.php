@@ -56,12 +56,12 @@ class BibliotheekController extends Controller
     public function deleteFromFavorites($id, Request $request, \App\Models\FavorieteBoeken $boeken){
         DB::table('favoriete_boeken')->where('id', '=', $id)->delete();
         //-------------------
-        $validatedData = $request->validate([
-            id => 'nullable',
-            genre => 'nullable'
-        ]);
-
-        return json_encode($validatedData);
+        $boekenVanGenre = \App\Models\Boek::where('genre_naam', '=', $request->genre)->get(); 
+        $favoBoeken = $boeken::where('user_id', '=', 1)->pluck('boek_id');
+        return Response::json(array(
+            'boeken' => $boekenVanGenre,
+            'favorieten' => $favoBoeken
+        ));
     }
 
     public function addToBoekenlijst($id, Request $request, \App\Models\GekozenBoek $boeken){
