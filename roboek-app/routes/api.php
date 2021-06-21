@@ -29,7 +29,6 @@ Route::get('/bibliotheek/details/{id}', [\App\Http\Controllers\BibliotheekContro
 Route::get('/bibliotheek/{genre}', [\App\Http\Controllers\BibliotheekController::class, 'showGenre']);
 Route::get('/bibliotheek/choose/genre', [\App\Http\Controllers\BibliotheekController::class, 'chooseGenre']);
 Route::post('/bibliotheek/favorite/{id}', [\App\Http\Controllers\BibliotheekController::class, 'addToFavorites']);
-Route::delete('/bibliotheek/favorite/{id}', [\App\Http\Controllers\BibliotheekController::class, 'deleteFromFavorites']);
 Route::delete('/bibliotheek/favorite/delete/{id}', [\App\Http\Controllers\BibliotheekController::class, 'deleteFromFavorites']);
 
 // Routes voor de gebruikers
