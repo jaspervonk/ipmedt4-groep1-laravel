@@ -76,4 +76,27 @@ class BoekenkastenController extends Controller
         $Boekenkast::where('user_id', '=', $id)->update(['item_id_slot' . $request->slot => $request->item_id]);
         return;
     }
+
+    public function updateColor($id, Request $request, \App\Models\Boekenkast $Boekenkast, \App\Models\Item $Item) {
+        $item = $Item::where('id', '=', $request->item_id)->first();
+        // Als het een kastkleur is
+        if($item->soort === "Kastkleur"){
+            // Vul de kast_kleur_primary en kast_kleur_secondary in de boekenkast van de gebruiker
+            $Boekenkast::where('user_id', '=', $id)->update([
+                'kast_kleur_primary' => $item->kleur_primary,
+                'kast_kleur_secondary' => $item->kleur_secondary,
+            ]);
+        }
+
+        // Als het een robotkleur is
+        if($item->soort === "Robotkleur"){
+            // Vul de robot_kleur in de boekenkast van de gebruiker
+            $Boekenkast::where('user_id', '=', $id)->update([
+                'robot_kleur' => $item->kleur_primary
+            ]);
+        }
+
+
+        return [$Boekenkast::where('user_id', '=', $id)->first()];
+    }
 }

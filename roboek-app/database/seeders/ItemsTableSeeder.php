@@ -76,7 +76,7 @@ class ItemsTableSeeder extends Seeder
             'beschrijving' => "Hiermee wordt de kleur van Roboek paars!",
             'prijs' => 300,
             'kleur_primary'=> "#B61FDC",
-            'image' => "img/default_item_color.png",
+            'image' => "img/robot_icon_preview.png",
         ]);
 
         DB::table('items')->insert([
@@ -94,7 +94,7 @@ class ItemsTableSeeder extends Seeder
             'beschrijving' => "Hiermee wordt de kleur van Roboek blauw!",
             'prijs' => 300,
             'kleur_primary'=> "#3687b5",
-            'image' => "img/default_item_color.png",
+            'image' => "img/robot_icon_preview.png",
         ]);
 
     }

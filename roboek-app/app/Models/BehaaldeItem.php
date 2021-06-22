@@ -8,5 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class BehaaldeItem extends Model
 {
     use HasFactory;
+    public $timestamps = false;
+
     protected $table = "behaalde_items";
 }
