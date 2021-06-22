@@ -35,6 +35,14 @@ class ItemsTableSeeder extends Seeder
         ]);
 
         DB::table('items')->insert([
+            'soort' => "Kastdecoratie",
+            'naam' => "Troffee",
+            'beschrijving' => "Dit is een troffee voor op je kast!",
+            'prijs' => 400,
+            'image' => "img/item_troffee.png",
+        ]);
+
+        DB::table('items')->insert([
             'soort' => "Kastkleur",
             'naam' => "Kastkleur bruin",
             'beschrijving' => "De kleur van je kast wordt bruin.",
@@ -45,6 +53,15 @@ class ItemsTableSeeder extends Seeder
         ]);
 
         DB::table('items')->insert([
+            'soort' => "Placeholder",
+            'naam' => "Leeg kastdecoratie",
+            'beschrijving' => "Je kan hier een item plaatsen!",
+            'prijs' => 0,
+            'kleur_primary'=> "#B61FDC",
+            'image' => "img/default_empty_slot.png",
+        ]);
+
+        DB::table('items')->insert([
             'soort' => "Kastkleur",
             'naam' => "Kastkleur roze",
             'beschrijving' => "De kleur van je kast wordt roze.",
@@ -52,14 +69,6 @@ class ItemsTableSeeder extends Seeder
             'kleur_primary'=> "#ff59e6",
             'kleur_secondary'=> "#a32791",
             'image' => "img/default_item_color.png",
-        ]);
-
-        DB::table('items')->insert([
-            'soort' => "Kastdecoratie",
-            'naam' => "Troffee",
-            'beschrijving' => "Dit is een troffee voor op je kast!",
-            'prijs' => 400,
-            'image' => "img/item_troffee.png",
         ]);
 
         DB::table('items')->insert([
@@ -77,15 +86,6 @@ class ItemsTableSeeder extends Seeder
             'prijs' => 300,
             'kleur_primary'=> "#B61FDC",
             'image' => "img/robot_icon_preview.png",
-        ]);
-
-        DB::table('items')->insert([
-            'soort' => "Placeholder",
-            'naam' => "Leeg kastdecoratie",
-            'beschrijving' => "Je kan hier een item plaatsen!",
-            'prijs' => 0,
-            'kleur_primary'=> "#B61FDC",
-            'image' => "img/default_empty_slot.png",
         ]);
 
         DB::table('items')->insert([
