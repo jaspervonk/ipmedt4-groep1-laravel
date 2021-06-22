@@ -50,5 +50,14 @@ class ItemsTableSeeder extends Seeder
             'kleur_primary'=> "#B61FDC",
             'image' => "img/default_item_color.png",
         ]);
+
+        DB::table('items')->insert([
+            'soort' => "Placeholder",
+            'naam' => "Leeg kastdecoratie",
+            'beschrijving' => "Je kan hier een item plaatsen!",
+            'prijs' => 0,
+            'kleur_primary'=> "#B61FDC",
+            'image' => "img/default_empty_slot.png",
+        ]);
     }
 }
