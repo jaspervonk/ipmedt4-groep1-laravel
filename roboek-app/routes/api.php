@@ -36,8 +36,15 @@ Route::post('/user/create', [\App\Http\Controllers\UserController::class, 'store
 // Routes voor de puzzels
 Route::get('/puzzel/{id}', [\App\Http\Controllers\PuzzelController::class, 'show']);
 
-//ROUTES VOOR BOEKENLIJST:
+// Routes voor de boekenlijst:
 Route::post('/boekenlijst/add/{id}', [\App\Http\Controllers\BibliotheekController::class, 'addToBoekenlijst']);
 Route::delete('/boekenlijst/delete/{id}', [\App\Http\Controllers\BibliotheekController::class, 'deleteFromBoekenlijst']);
 
 Route::get('/boekenlijst/{id}', [\App\Http\Controllers\BoekenlijstController::class, 'gekozenBoeken']);
+Route::get('/boekenlijst/detail/{id}', [\App\Http\Controllers\BoekenlijstController::class, 'boekDetail']);
+Route::get('/hoofdstukken/{id}' , [\App\Http\Controllers\BoekenlijstController::class, 'alleHoofdstukken']);
+Route::get('/hoofdstukken/gelezen/{boek}/{id}' , [\App\Http\Controllers\BoekenlijstController::class, 'gelezenHoofdstukken']);
+
+Route::post('/hoofdstukken/gelezen/{boek}/{hoofdstuk}/{id}' , [\App\Http\Controllers\BoekenlijstController::class, 'hoofdstukAfvinken']);
+Route::delete('/hoofdstukken/gelezen/{boek}/{hoofdstuk}/{id}' , [\App\Http\Controllers\BoekenlijstController::class, 'hoofdstukVerwijder']);
+Route::delete('/boekenlijst/delete/{boek}/{id}', [\App\Http\Controllers\BoekenlijstController::class, 'verwijderBoek']);
