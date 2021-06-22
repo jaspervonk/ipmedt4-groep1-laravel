@@ -18,6 +18,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+// Route voor de winkel
+Route::get('/winkel/{id}', [\App\Http\Controllers\ItemController::class, 'soorten']);
+Route::put('/winkel/update/color/{id}', [\App\Http\Controllers\BoekenkastenController::class, 'updateColor']);
+Route::post('/winkel/koop/item/{id}', [\App\Http\Controllers\ItemController::class, 'koopItem']);
+
 // Routes voor de boekenkast
 Route::get('/boekenkast/{id}', [App\Http\Controllers\BoekenkastenController::class, 'show']);
 Route::put('/boekenkast/update/medaille/{id}', [App\Http\Controllers\BoekenkastenController::class, 'updateMedaille']);

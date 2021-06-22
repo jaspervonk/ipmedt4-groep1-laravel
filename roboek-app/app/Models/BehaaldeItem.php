@@ -5,14 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Item extends Model
+class BehaaldeItem extends Model
 {
     use HasFactory;
     public $timestamps = false;
-    
-    protected $table = "items";
 
-    public function Soort() {
-        return $this->belongsTo(SoortItem::class);
-    }
+    protected $table = "behaalde_items";
 }
