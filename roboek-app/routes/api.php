@@ -34,7 +34,6 @@ Route::get('/bibliotheek/details/{id}', [\App\Http\Controllers\BibliotheekContro
 Route::get('/bibliotheek/{genre}', [\App\Http\Controllers\BibliotheekController::class, 'showGenre']);
 Route::get('/bibliotheek/choose/genre', [\App\Http\Controllers\BibliotheekController::class, 'chooseGenre']);
 Route::post('/bibliotheek/favorite/{id}', [\App\Http\Controllers\BibliotheekController::class, 'addToFavorites']);
-Route::delete('/bibliotheek/favorite/{id}', [\App\Http\Controllers\BibliotheekController::class, 'deleteFromFavorites']);
 Route::delete('/bibliotheek/favorite/delete/{id}', [\App\Http\Controllers\BibliotheekController::class, 'deleteFromFavorites']);
 
 // Routes voor de gebruikers
@@ -42,6 +41,9 @@ Route::post('/user/create', [\App\Http\Controllers\UserController::class, 'store
 
 // Routes voor de puzzels
 Route::get('/puzzel/{id}', [\App\Http\Controllers\PuzzelController::class, 'show']);
+Route::get('/medaille/{id}', [\App\Http\Controllers\PuzzelController::class, 'showMedaille']);
+Route::post('/verdienmedaille/{id}/{medaille}', [\App\Http\Controllers\PuzzelController::class, 'geefMedaille']);
+Route::patch('/puzzelklaar/{id}/{muntjes}', [\App\Http\Controllers\PuzzelController::class, 'geefMuntjes']);
 
 //ROUTES VOOR BOEKENLIJST:
 Route::post('/boekenlijst/add/{id}', [\App\Http\Controllers\BibliotheekController::class, 'addToBoekenlijst']);

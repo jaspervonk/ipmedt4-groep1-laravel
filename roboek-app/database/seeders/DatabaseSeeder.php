@@ -28,7 +28,7 @@ class DatabaseSeeder extends Seeder
             ItemsTableSeeder::class,
             BehaaldeItemsTableSeeder::class,
             BoekenkastenTableSeeder::class,
-            GekozenBoekenTableSeeder::class,
+            // GekozenBoekenTableSeeder::class,
         ]);
     }
 }

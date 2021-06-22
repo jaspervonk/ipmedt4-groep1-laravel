@@ -8,7 +8,7 @@ use Response;
 
 class BibliotheekController extends Controller
 {
-    public function index(\App\Models\GekozenBoek $boeken){
+    public function index(\App\Models\FavorieteBoeken $boeken){
         $boekenVanGenre = \App\Models\Boek::all(); 
         $favoBoeken = $boeken::where('user_id', '=', 1)->pluck('boek_id');
         return Response::json(array(
@@ -54,14 +54,14 @@ class BibliotheekController extends Controller
     }
 
     public function deleteFromFavorites($id, Request $request, \App\Models\FavorieteBoeken $boeken){
-        DB::table('favoriete_boeken')->where('id', '=', $id)->delete();
+        DB::table('favoriete_boeken')->where('boek_id', '=', $id)->where('user_id', '=', 1)->delete();
         //-------------------
-        $validatedData = $request->validate([
-            id => 'nullable',
-            genre => 'nullable'
-        ]);
-
-        return json_encode($validatedData);
+        $boekenVanGenre = \App\Models\Boek::where('genre_naam', '=', $request->genre)->get(); 
+        $favoBoeken = $boeken::where('user_id', '=', 1)->pluck('boek_id');
+        return Response::json(array(
+            'boeken' => $boekenVanGenre,
+            'favorieten' => $favoBoeken
+        ));
     }
 
     public function addToBoekenlijst($id, Request $request, \App\Models\GekozenBoek $boeken){
