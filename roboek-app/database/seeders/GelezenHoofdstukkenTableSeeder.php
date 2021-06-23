@@ -14,34 +14,6 @@ class GelezenHoofdstukkenTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('gelezen_hoofdstukken')->insert([
-            'hoofdstuk_id' => 1,
-            'user_id' => 1,
-            'boek_id' => 2
-        ]);
 
-        DB::table('gelezen_hoofdstukken')->insert([
-            'hoofdstuk_id' => 1,
-            'user_id' => 2,
-            'boek_id' => 2
-        ]);
-
-        DB::table('gelezen_hoofdstukken')->insert([
-            'hoofdstuk_id' => 2,
-            'user_id' => 1,
-            'boek_id' => 2
-        ]);
-
-        DB::table('gelezen_hoofdstukken')->insert([
-            'hoofdstuk_id' => 2,
-            'user_id' => 2,
-            'boek_id' => 2
-        ]);
-
-        DB::table('gelezen_hoofdstukken')->insert([
-            'hoofdstuk_id' => 3,
-            'user_id' => 1,
-            'boek_id' => 2
-        ]);
     }
 }
