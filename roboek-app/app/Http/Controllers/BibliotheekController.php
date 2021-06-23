@@ -36,6 +36,19 @@ class BibliotheekController extends Controller
         ));
     }
 
+    // public function showFavorieten(\App\Models\FavorieteBoeken $boeken){
+    //     $boek_ids = \App\Models\Boek::all()->pluck('id'); 
+    //     $favoBoeken = $boeken::where('user_id', '=', 1)->pluck('boek_id');
+
+    //     $favoBoekenItems = \App\Models\Boek::where('id', '=', for($i = 1;$i<=$favoBoeken[i])->get();
+
+    //     return Response::json(array(
+    //         'boeken' => $boek_ids,
+    //         'favorieten' => $favoBoeken,
+    //         'favorieten_items' => $favoBoekenItems,
+    //     ));
+    // }
+
     public function chooseGenre(){
         return \App\Models\Genre::all();
     }
