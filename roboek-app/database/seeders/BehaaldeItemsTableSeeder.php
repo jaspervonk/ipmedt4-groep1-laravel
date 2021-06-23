@@ -14,20 +14,7 @@ class BehaaldeItemsTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('behaalde_items')->insert([
-            'item_id' => 1,
-            'user_id' => 1,
-        ]);
-
-        DB::table('behaalde_items')->insert([
-            'item_id' => 1,
-            'user_id' => 2,
-        ]);
-
-        DB::table('behaalde_items')->insert([
-            'item_id' => 2,
-            'user_id' => 1,
-        ]);
+        // Item 3 (Lege Plek)
 
         DB::table('behaalde_items')->insert([
             'item_id' => 3,
@@ -38,11 +25,32 @@ class BehaaldeItemsTableSeeder extends Seeder
             'item_id' => 3,
             'user_id' => 2,
         ]);
+
+        DB::table('behaalde_items')->insert([
+            'item_id' => 3,
+            'user_id' => 3,
+        ]);
+
+        // Item 4 (Welkom bij Roboek)
 
         DB::table('behaalde_items')->insert([
             'item_id' => 4,
             'user_id' => 1,
         ]);
+
+        DB::table('behaalde_items')->insert([
+            'item_id' => 4,
+            'user_id' => 2,
+        ]);
+
+        DB::table('behaalde_items')->insert([
+            'item_id' => 4,
+            'user_id' => 3,
+        ]);
+
+
+
+
 
 
     }

@@ -55,8 +55,14 @@ class MedaillesTableSeeder extends Seeder
         ]);
 
         DB::table('medailles')->insert([
-            'naam' => "Welkom bij Roboek!",
-            'beschrijving' => "Je bent nieuw bij Roboek!",
+            'naam' => "Plek leeg maken",
+            'beschrijving' => "Opgeruimd staat netjes!",
+            'image' => "img/lege_plek.png",
+        ]);
+
+        DB::table('medailles')->insert([
+            'naam' => "Placeholder",
+            'beschrijving' => "Je kan deze plek nog vullen!",
             'image' => "img/default_empty_slot.png",
         ]);
     }

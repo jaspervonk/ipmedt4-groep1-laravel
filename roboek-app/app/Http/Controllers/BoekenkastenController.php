@@ -18,7 +18,7 @@ class BoekenkastenController extends Controller
             }
             else{
                 // Als er geen medaille in het slot moet komen; voeg default empty slot medaille toe
-                $boekenkastMedailles[] = \App\Models\Medaille::find(7);
+                $boekenkastMedailles[] = \App\Models\Medaille::where('naam', '=', 'Placeholder')->first();
             }
         }
 
@@ -32,7 +32,7 @@ class BoekenkastenController extends Controller
             }
             else{
                 // Als er geen Item in het slot moet komen; voeg default empty slot Item toe
-                $boekenkastItems[] = \App\Models\Item::find(5);
+                $boekenkastItems[] = \App\Models\Item::where('soort', '=', 'Placeholder')->first();
             }
         }
 
