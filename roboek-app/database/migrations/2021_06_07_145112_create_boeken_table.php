@@ -21,6 +21,9 @@ class CreateBoekenTable extends Migration
             $table->string('auteur');
             $table->longText('beschrijving');
             $table->string('image');
+            $table->string('videolink')->nullable();
+            $table->string('hoofdpersoon')->nullable();
+            $table->string('hoofdpersoon_image')->nullable();
         });
     }
 
