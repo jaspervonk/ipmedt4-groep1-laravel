@@ -21,7 +21,7 @@ class GenresTableSeeder extends Seeder
         ]);
 
         DB::table('genres')->insert([
-            'naam' => "Dieren en natuur",
+            'naam' => "Dieren&Natuur",
             'beschrijving' => "Boeken over dieren en natuur.",
             'image' => "img/default_dieren.jpg",
         ]);
@@ -57,7 +57,7 @@ class GenresTableSeeder extends Seeder
         ]);
 
         DB::table('genres')->insert([
-            'naam' => "Vriendschap en Verliefd",
+            'naam' => "Vriendschap&Verliefd",
             'beschrijving' => "Boeken over vriendschappen en verliefd zijn.",
             'image' => "img/default_vriendschap_en_verliefd.jpg",
         ]);
