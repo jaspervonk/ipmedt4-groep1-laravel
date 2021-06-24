@@ -18,211 +18,211 @@ class HoofdstukkenTableSeeder extends Seeder
         /*Dolfje Weerwolfje*/
 
         DB::table('hoofdstukken')->insert([
-            'boek_id' => 2,
+            'boek_id' => 28,
             'hoofdstuk_nummer' => 1,
             'titel' => "Zeven",
         ]);
 
         DB::table('hoofdstukken')->insert([
-            'boek_id' => 2,
+            'boek_id' => 28,
             'hoofdstuk_nummer' => 2,
             'titel' => "Huilen",
         ]);
 
         DB::table('hoofdstukken')->insert([
-            'boek_id' => 2,
+            'boek_id' => 28,
             'hoofdstuk_nummer' => 3,
             'titel' => "Nee!",
         ]);
 
         DB::table('hoofdstukken')->insert([
-            'boek_id' => 2,
+            'boek_id' => 28,
             'hoofdstuk_nummer' => 4,
             'titel' => "Schim",
         ]);
 
         DB::table('hoofdstukken')->insert([
-            'boek_id' => 2,
+            'boek_id' => 28,
             'hoofdstuk_nummer' => 5,
             'titel' => "Sprong",
         ]);
 
         DB::table('hoofdstukken')->insert([
-            'boek_id' => 2,
+            'boek_id' => 28,
             'hoofdstuk_nummer' => 6,
             'titel' => "Krijsen",
         ]);
 
         DB::table('hoofdstukken')->insert([
-            'boek_id' => 2,
+            'boek_id' => 28,
             'hoofdstuk_nummer' => 7,
             'titel' => "Bloed",
         ]);
 
         DB::table('hoofdstukken')->insert([
-            'boek_id' => 2,
+            'boek_id' => 28,
             'hoofdstuk_nummer' => 8,
             'titel' => "Monster",
         ]);
 
         DB::table('hoofdstukken')->insert([
-            'boek_id' => 2,
+            'boek_id' => 28,
             'hoofdstuk_nummer' => 9,
             'titel' => "Geest",
         ]);
 
         DB::table('hoofdstukken')->insert([
-            'boek_id' => 2,
+            'boek_id' => 28,
             'hoofdstuk_nummer' => 10,
             'titel' => "Pook",
         ]);
 
         DB::table('hoofdstukken')->insert([
-            'boek_id' => 2,
+            'boek_id' => 28,
             'hoofdstuk_nummer' => 11,
             'titel' => "Grote Boze Wolf",
         ]);
 
         DB::table('hoofdstukken')->insert([
-            'boek_id' => 2,
+            'boek_id' => 28,
             'hoofdstuk_nummer' => 12,
             'titel' => "Schaduw",
         ]);
 
         DB::table('hoofdstukken')->insert([
-            'boek_id' => 2,
+            'boek_id' => 28,
             'hoofdstuk_nummer' => 13,
             'titel' => "Plons!",
         ]);
 
         DB::table('hoofdstukken')->insert([
-            'boek_id' => 2,
+            'boek_id' => 28,
             'hoofdstuk_nummer' => 14,
             'titel' => "Ongelukje",
         ]);
 
         DB::table('hoofdstukken')->insert([
-            'boek_id' => 2,
+            'boek_id' => 28,
             'hoofdstuk_nummer' => 15,
             'titel' => "Douche",
         ]);
 
         DB::table('hoofdstukken')->insert([
-            'boek_id' => 2,
+            'boek_id' => 28,
             'hoofdstuk_nummer' => 16,
             'titel' => "Gevecht",
         ]);
 
         DB::table('hoofdstukken')->insert([
-            'boek_id' => 2,
+            'boek_id' => 28,
             'hoofdstuk_nummer' => 17,
             'titel' => "Neeee!",
         ]);
 
         DB::table('hoofdstukken')->insert([
-            'boek_id' => 2,
+            'boek_id' => 28,
             'hoofdstuk_nummer' => 18,
             'titel' => "Aaaah!",
         ]);
 
         DB::table('hoofdstukken')->insert([
-            'boek_id' => 2,
+            'boek_id' => 28,
             'hoofdstuk_nummer' => 19,
             'titel' => "Plannetje",
         ]);
 
         DB::table('hoofdstukken')->insert([
-            'boek_id' => 2,
+            'boek_id' => 28,
             'hoofdstuk_nummer' => 20,
             'titel' => "Verkleden",
         ]);
 
         DB::table('hoofdstukken')->insert([
-            'boek_id' => 2,
+            'boek_id' => 28,
             'hoofdstuk_nummer' => 21,
             'titel' => "Nico-o-o!",
         ]);
 
         DB::table('hoofdstukken')->insert([
-            'boek_id' => 2,
+            'boek_id' => 28,
             'hoofdstuk_nummer' => 22,
             'titel' => "Pets!",
         ]);
 
         DB::table('hoofdstukken')->insert([
-            'boek_id' => 2,
+            'boek_id' => 28,
             'hoofdstuk_nummer' => 23,
             'titel' => "Pantoffels",
         ]);
 
         DB::table('hoofdstukken')->insert([
-            'boek_id' => 2,
+            'boek_id' => 28,
             'hoofdstuk_nummer' => 24,
             'titel' => "Meneer van Dale",
         ]);
 
         DB::table('hoofdstukken')->insert([
-            'boek_id' => 2,
+            'boek_id' => 28,
             'hoofdstuk_nummer' => 25,
             'titel' => "Man",
         ]);
 
         DB::table('hoofdstukken')->insert([
-            'boek_id' => 2,
+            'boek_id' => 28,
             'hoofdstuk_nummer' => 26,
             'titel' => "Applaus",
         ]);
 
         DB::table('hoofdstukken')->insert([
-            'boek_id' => 2,
+            'boek_id' => 28,
             'hoofdstuk_nummer' => 27,
             'titel' => "Pijn",
         ]);
 
         DB::table('hoofdstukken')->insert([
-            'boek_id' => 2,
+            'boek_id' => 28,
             'hoofdstuk_nummer' => 28,
             'titel' => "Ogen",
         ]);
 
         DB::table('hoofdstukken')->insert([
-            'boek_id' => 2,
+            'boek_id' => 28,
             'hoofdstuk_nummer' => 29,
             'titel' => "Alarm",
         ]);
 
         DB::table('hoofdstukken')->insert([
-            'boek_id' => 2,
+            'boek_id' => 28,
             'hoofdstuk_nummer' => 30,
             'titel' => "Val",
         ]);
 
         DB::table('hoofdstukken')->insert([
-            'boek_id' => 2,
+            'boek_id' => 28,
             'hoofdstuk_nummer' => 31,
             'titel' => "Een grote, pikzwarte",
         ]);
 
         DB::table('hoofdstukken')->insert([
-            'boek_id' => 2,
+            'boek_id' => 28,
             'hoofdstuk_nummer' => 32,
             'titel' => "Los!",
         ]);
 
         DB::table('hoofdstukken')->insert([
-            'boek_id' => 2,
+            'boek_id' => 28,
             'hoofdstuk_nummer' => 33,
             'titel' => "Zeldzaam",
         ]);
 
         DB::table('hoofdstukken')->insert([
-            'boek_id' => 2,
+            'boek_id' => 28,
             'hoofdstuk_nummer' => 34,
             'titel' => "Bezoek",
         ]);
 
         DB::table('hoofdstukken')->insert([
-            'boek_id' => 2,
+            'boek_id' => 28,
             'hoofdstuk_nummer' => 35,
             'titel' => "Wrow",
         ]);

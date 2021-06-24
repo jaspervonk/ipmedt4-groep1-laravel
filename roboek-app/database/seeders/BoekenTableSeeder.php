@@ -286,12 +286,14 @@ class BoekenTableSeeder extends Seeder
             'isbn' => 9789066921863,
             'titel' => "Dolfje Weerwolfje",
             'auteur' => "Paul van Loon",
-            'beschrijving' => "Als hij zeven wordt, ontdekt Dolfje dat hij een weerwolf is. Eigenlijk is Dolfje een heel gewone jongen. Maar drie nachten per maand, bij volle maan, verandert hij in een weerwolf. Een witte weerwolf met een brilletje op. Eerst werd Dolfje daar verdrietig van. Hij wilde zelfs weglopen van huis. Maar Timmies ouders vonden het helemaal niet erg dat hij een weerwolfje is. Gelukkig maar, want nu kan hij gewoon thuis blijven wonen.
-            Met volle maan beleeft hij de spannendste avonturen. Samen met Noura, Timmie, opa weerwolf en neef Leo.",
+            'beschrijving' => "Als hij zeven wordt, ontdekt Dolfje dat hij een weerwolf is. Eerst werd Dolfje daar verdrietig van. Hij wilde zelfs weglopen van huis. Maar Timmies ouders vonden het helemaal niet erg dat hij een weerwolfje is. Gelukkig maar, want nu kan hij gewoon thuis blijven wonen.
+                Met volle maan beleeft hij de spannendste avonturen. Samen met Noura, Timmie, opa weerwolf en neef Leo.",
             'image' => "img/default_9789066921863.jpg",
             'videolink' => "https://www.youtube.com/embed/Rcsuo6XxALU",
             'hoofdpersoon' => "Dolfje",
-            'hoofdpersoon_image' => "bibliotheek/img/9789066921863-Dolfje_Weerwolfje.png"
+            'hoofdpersoon_beschrijving' => "Eigenlijk is Dolfje een heel gewone jongen. Maar drie nachten per maand, bij volle maan, verandert hij in een weerwolf. Een witte weerwolf met een brilletje op.",
+            'hoofdpersoon_image' => "/img/9789066921863-Dolfje_Weerwolfje.png",
+            'audio' => "/audio/9789066921863_audio.wav"
         ]);
 
         DB::table('boeken')->insert([
